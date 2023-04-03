@@ -9,20 +9,30 @@ import androidx.recyclerview.widget.RecyclerView
 class MyAdapter(private val storageList : ArrayList<Storage>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
 
+    private lateinit var mListener: onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(clickListener: onItemClickListener){
+        mListener = clickListener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.storage_item,
             parent,false)
-        return MyViewHolder(itemView)
+        return MyViewHolder(itemView,mListener)
 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val currentitem = storageList[position]
+        val currentItem = storageList[position]
 
-        holder.humidity.text = currentitem.humidity.toString()
-        holder.temperature.text = currentitem.temperature.toString()
+        holder.tvTemp.text = currentItem.temperature.toString()
+        holder.tvHumid.text = currentItem.humidity.toString()
 
 
     }
@@ -33,12 +43,15 @@ class MyAdapter(private val storageList : ArrayList<Storage>) : RecyclerView.Ada
     }
 
 
-    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    class MyViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
 
+        val tvTemp : TextView = itemView.findViewById(R.id.tvTemp)
+        val tvHumid : TextView = itemView.findViewById(R.id.tvHumid)
 
-        val humidity : TextView = itemView.findViewById(R.id.humValue)
-        val temperature : TextView = itemView.findViewById(R.id.tempValue)
-
+        init {
+            itemView.setOnClickListener {
+                clickListener.onItemClick(adapterPosition)
+            }
+        }
     }
-
 }

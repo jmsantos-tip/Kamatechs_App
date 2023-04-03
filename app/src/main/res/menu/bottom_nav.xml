@@ -3,13 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/aboutFragment"
-        android:icon="@drawable/baseline_info_24"
-        android:title="About" />
-    <item
         android:id="@+id/homeActivity"
         android:icon="@drawable/baseline_home_24"
         android:title="Home" />
+
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/baseline_info_24"
+        android:title="About" />
+
     <item
         android:id="@+id/FAQFragment"
         android:icon="@drawable/baseline_question_answer_24"

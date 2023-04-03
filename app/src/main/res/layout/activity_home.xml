@@ -47,7 +47,7 @@
                         android:layout_marginEnd="52dp"
                         android:fontFamily="@font/raleway_bold"
                         android:textColor="@color/colorAccent"
-                        android:text="Your no. 1 go to storage status database and weather checker application for Tomato Cooling Storage Device"
+                        android:text="Your no. 1 go to storage status database application for Tomato Cooling Storage Device"
                         android:textAlignment="center"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -67,37 +67,34 @@
                         app:layout_constraintTop_toBottomOf="@+id/definition"
                         app:srcCompat="@drawable/logo2" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnStorage"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="350dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="30dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginEnd="31dp"
-                        android:fontFamily="@font/raleway_bold"
-                        android:text="STORAGE DEVICE STATUS"
-                        android:textColor="#6D4C41"
+
+                    <TextView
+                        android:id="@+id/txtSD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="111dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="112dp"
+                        android:text="Storage Device Status"
+                        android:textAppearance="@style/TextAppearance.Kamatechs_App.Text"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imgTomato" />
+                        app:layout_constraintTop_toBottomOf="@+id/btnStorage" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnWeather"
+                    <ImageButton
+                        android:id="@+id/btnStorage"
                         style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="350dp"
-                        android:layout_height="48dp"
-                        android:layout_marginStart="30dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="170dp"
                         android:layout_marginTop="24dp"
-                        android:layout_marginEnd="31dp"
-                        android:fontFamily="@font/raleway_bold"
-                        android:text="Check the Current Weather"
-                        android:textColor="#6D4C41"
-                        android:textSize="17sp"
+                        android:layout_marginEnd="171dp"
+                        android:background="@color/colorPrimary"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/btnStorage" />
+                        app:layout_constraintTop_toBottomOf="@+id/imgTomato"
+                        app:srcCompat="@drawable/baseline_inventory_24" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>

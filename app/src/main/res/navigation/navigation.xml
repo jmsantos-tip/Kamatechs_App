@@ -20,11 +20,6 @@
         android:label="fragment_f_a_q"
         tools:layout="@layout/fragment_f_a_q" />
     <activity
-        android:id="@+id/weatherActivity"
-        android:name="com.example.kamatechs_app.api.WeatherActivity"
-        android:label="activity_weather"
-        tools:layout="@layout/activity_weather"/>
-    <activity
         android:id="@+id/storageActivity"
         android:name="com.example.kamatechs_app.StorageActivity"
         android:label="activity_storage"

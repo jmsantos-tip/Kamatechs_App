@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.example.kamatechs_app.api.WeatherActivity
 import com.example.kamatechs_app.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -28,10 +27,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, StorageActivity::class.java))
             true
         }
-        binding.btnWeather.setOnClickListener {
-            startActivity(Intent(this, WeatherActivity::class.java))
-            true
-        }
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -48,10 +43,7 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
-                R.id.weatherActivity -> {
-                    startActivity(Intent(this, WeatherActivity::class.java))
-                    true
-                }
+
                 R.id.storageActivity -> {
                     startActivity(Intent(this, StorageActivity::class.java))
                     true
@@ -74,12 +66,13 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
-                R.id.aboutFragment -> {
-                    replaceFragment(AboutFragment())
-                    true
-                }
+
                 R.id.homeActivity -> {
                     startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.aboutFragment -> {
+                    replaceFragment(AboutFragment())
                     true
                 }
                 R.id.FAQFragment -> {

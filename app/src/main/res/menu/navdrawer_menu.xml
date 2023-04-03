@@ -10,13 +10,9 @@
     <item android:title="Features">
         <menu>
             <item
-                android:id="@+id/weatherActivity"
-                android:icon="@drawable/baseline_cloud_24"
-                android:title="Weather" />
-            <item
                 android:id="@+id/storageActivity"
-                android:icon="@drawable/baseline_storage_24"
-                android:title="Storage" />
+                android:icon="@drawable/baseline_sto"
+                android:title="Storage Status" />
         </menu>
     </item>
     <item android:title="Support">
