@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FAQFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/gradient_bg"
+        android:id="@+id/faqConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageFaq"
+            android:layout_width="123dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="115dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_question_answer_24"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textF"
+            style="@style/TextAppearance.Kamatechs_App.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="56dp"
+            android:text="Frequently Asked Questions"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageFaq" />
+
+        <TextView
+            android:id="@+id/textFAQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="341dp"
+            android:fontFamily="@font/raleway"
+            android:text="Text"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textF" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

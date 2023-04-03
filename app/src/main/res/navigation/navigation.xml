@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginActivity">
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.kamatechs_app.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/developersFragment"
+        android:name="com.example.kamatechs_app.DevelopersFragment"
+        android:label="fragment_developers"
+        tools:layout="@layout/fragment_developers" />
+    <fragment
+        android:id="@+id/FAQFragment"
+        android:name="com.example.kamatechs_app.FAQFragment"
+        android:label="fragment_f_a_q"
+        tools:layout="@layout/fragment_f_a_q" />
+    <activity
+        android:id="@+id/weatherActivity"
+        android:name="com.example.kamatechs_app.api.WeatherActivity"
+        android:label="activity_weather"
+        tools:layout="@layout/activity_weather"/>
+    <activity
+        android:id="@+id/storageActivity"
+        android:name="com.example.kamatechs_app.StorageActivity"
+        android:label="activity_storage"
+        tools:layout="@layout/activity_storage" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.kamatechs_app.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.kamatechs_app.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/signupActivity"
+        android:name="com.example.kamatechs_app.SignupActivity"
+        android:label="activity_signup"
+        tools:layout="@layout/activity_signup" />
+</navigation>

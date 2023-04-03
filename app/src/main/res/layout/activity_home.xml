@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/homelayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/homeConstraint"
+                    android:background="@drawable/gradient_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/welcomeHome"
+                        android:layout_width="312dp"
+                        android:layout_height="84dp"
+                        android:layout_marginStart="51dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="50dp"
+                        android:text="Welcome to Kamatechs"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.Kamatechs_App.Title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/definition"
+                        android:layout_width="336dp"
+                        android:layout_height="91dp"
+                        android:layout_marginStart="61dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="52dp"
+                        android:fontFamily="@font/raleway_bold"
+                        android:textColor="@color/colorAccent"
+                        android:text="Your no. 1 go to storage status database and weather checker application for Tomato Cooling Storage Device"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.539"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/welcomeHome" />
+
+                    <ImageView
+                        android:id="@+id/imgTomato"
+                        android:layout_width="228dp"
+                        android:layout_height="246dp"
+                        android:layout_marginStart="79dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="80dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/definition"
+                        app:srcCompat="@drawable/logo2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStorage"
+                        style="@style/Widget.Kamatechs_App.Button"
+                        android:layout_width="350dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="31dp"
+                        android:fontFamily="@font/raleway_bold"
+                        android:text="STORAGE DEVICE STATUS"
+                        android:textColor="#6D4C41"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgTomato" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnWeather"
+                        style="@style/Widget.Kamatechs_App.Button"
+                        android:layout_width="350dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="31dp"
+                        android:fontFamily="@font/raleway_bold"
+                        android:text="Check the Current Weather"
+                        android:textColor="#6D4C41"
+                        android:textSize="17sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnStorage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:keepScreenOn="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_nav"
+                style="@style/Widget.App.BottomNavigationView"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

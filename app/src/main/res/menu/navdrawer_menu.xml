@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeActivity"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+
+    <item android:title="Features">
+        <menu>
+            <item
+                android:id="@+id/weatherActivity"
+                android:icon="@drawable/baseline_cloud_24"
+                android:title="Weather" />
+            <item
+                android:id="@+id/storageActivity"
+                android:icon="@drawable/baseline_storage_24"
+                android:title="Storage" />
+        </menu>
+    </item>
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/aboutFragment"
+                android:icon="@drawable/baseline_info_24"
+                android:title="About" />
+            <item
+                android:id="@+id/FAQFragment"
+                android:icon="@drawable/baseline_question_answer_24"
+                android:title="FAQ" />
+            <item
+                android:id="@+id/developersFragment"
+                android:icon="@drawable/baseline_developer_mode_24"
+                android:title="Developers" />
+        </menu>
+    </item>
+</menu>
