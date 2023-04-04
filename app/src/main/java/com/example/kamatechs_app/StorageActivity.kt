@@ -58,8 +58,10 @@ class StorageActivity : AppCompatActivity() {
                     mAdapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
                             val intent = Intent(this@StorageActivity, StorageDetailsActivity::class.java)
+                            intent.putExtra("dateTimeVal", storageArrayList[position].dateTime.toString())
                             intent.putExtra("tempVal", storageArrayList[position].temperature.toString())
                             intent.putExtra("humidVal", storageArrayList[position].humidity.toString())
+                            intent.putExtra("roomTempVal", storageArrayList[position].room_temperature.toString())
                             startActivity(intent)
                         }
                     })

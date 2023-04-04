@@ -31,8 +31,10 @@ class MyAdapter(private val storageList : ArrayList<Storage>) : RecyclerView.Ada
 
         val currentItem = storageList[position]
 
+        holder.tvDateTime.text = currentItem.dateTime.toString()
         holder.tvTemp.text = currentItem.temperature.toString()
         holder.tvHumid.text = currentItem.humidity.toString()
+        holder.tvRoomTemp.text = currentItem.room_temperature.toString()
 
 
     }
@@ -45,8 +47,10 @@ class MyAdapter(private val storageList : ArrayList<Storage>) : RecyclerView.Ada
 
     class MyViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
 
+        val tvDateTime : TextView = itemView.findViewById(R.id.tvDateTime)
         val tvTemp : TextView = itemView.findViewById(R.id.tvTemp)
         val tvHumid : TextView = itemView.findViewById(R.id.tvHumid)
+        val tvRoomTemp : TextView = itemView.findViewById(R.id.tvRoomTemp)
 
         init {
             itemView.setOnClickListener {
