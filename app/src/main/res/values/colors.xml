@@ -8,4 +8,6 @@
     <color name="toolbarIconColor">@color/textColorPrimary</color>
     <color name="textInputOutlineColor">#FBB8AC</color>
     <color name="navheader">#FBB8AC</color>
+    <color name="colorOff">	#FFFFFF</color>
+    <color name="colorOn">#FBB8AC</color>
 </resources>

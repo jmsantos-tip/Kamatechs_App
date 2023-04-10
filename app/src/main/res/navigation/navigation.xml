@@ -39,4 +39,9 @@
         android:name="com.example.kamatechs_app.SignupActivity"
         android:label="activity_signup"
         tools:layout="@layout/activity_signup" />
+    <activity
+        android:id="@+id/fruitsVegsActivity"
+        android:name="com.example.kamatechs_app.FruitsVegsActivity"
+        android:label="activity_fruits_vegs"
+        tools:layout="@layout/activity_fruits_vegs" />
 </navigation>

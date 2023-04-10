@@ -28,6 +28,11 @@ class HomeActivity : AppCompatActivity() {
             true
         }
 
+        binding.btnFV.setOnClickListener {
+            startActivity(Intent(this, FruitsVegsActivity::class.java))
+            true
+        }
+
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView : NavigationView = binding.navView
@@ -46,6 +51,11 @@ class HomeActivity : AppCompatActivity() {
 
                 R.id.storageActivity -> {
                     startActivity(Intent(this, StorageActivity::class.java))
+                    true
+                }
+
+                R.id.fruitsVegsActivity -> {
+                    startActivity(Intent(this, FruitsVegsActivity::class.java))
                     true
                 }
                 R.id.aboutFragment -> {
