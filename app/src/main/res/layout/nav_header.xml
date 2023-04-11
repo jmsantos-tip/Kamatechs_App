@@ -17,5 +17,5 @@
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kamatechs" />
+        app:srcCompat="@drawable/logo2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
