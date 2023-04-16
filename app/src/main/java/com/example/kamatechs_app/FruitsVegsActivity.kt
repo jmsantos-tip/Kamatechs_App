@@ -5,7 +5,6 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothSocket
 import android.content.ContentValues
 import android.content.Intent
-import android.media.Image
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -15,9 +14,9 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
@@ -32,7 +31,7 @@ class FruitsVegsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_fruits_vegs)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Fruits and Vegetables"
+        actionbar!!.title = "Storage Configuration"
         actionbar.setDisplayHomeAsUpEnabled(true)
 
         // UI Initialization
@@ -104,6 +103,72 @@ class FruitsVegsActivity : AppCompatActivity() {
         imageView16.setBackgroundColor(resources.getColor(R.color.colorOff))
         val buttonToggle16 = findViewById<Button>(R.id.buttonToggle34)
         buttonToggle16.isEnabled = false
+
+        //Clickable fruits
+        imageView.setOnClickListener {
+            replaceFragment(RipeTomatoFragment())
+        }
+
+        imageView2.setOnClickListener {
+            replaceFragment(GreenTomatoFragment())
+        }
+
+        imageView3.setOnClickListener {
+            replaceFragment(MangoFragment())
+        }
+
+        imageView4.setOnClickListener {
+            replaceFragment(CucumberFragment())
+        }
+
+        imageView5.setOnClickListener {
+            replaceFragment(GreenBananaFragment())
+        }
+
+        imageView6.setOnClickListener {
+            replaceFragment(RipeBananaFragment())
+        }
+
+        imageView7.setOnClickListener {
+            replaceFragment(WatermelonFragment())
+        }
+
+        imageView8.setOnClickListener {
+            replaceFragment(GingerRootFragment())
+        }
+
+        imageView9.setOnClickListener {
+            replaceFragment(JicamaFragment())
+        }
+
+        imageView10.setOnClickListener {
+            replaceFragment(SweetPotatoFragment())
+        }
+
+        imageView11.setOnClickListener {
+            replaceFragment(CoconutFragment())
+        }
+
+        imageView12.setOnClickListener {
+            replaceFragment(MelonFragment())
+        }
+
+        imageView13.setOnClickListener {
+            replaceFragment(PumpkinFragment())
+        }
+
+        imageView14.setOnClickListener {
+            replaceFragment(BasilFragment())
+        }
+
+        imageView15.setOnClickListener {
+            replaceFragment(LemonFragment())
+        }
+
+        imageView16.setOnClickListener {
+            replaceFragment(GrapeFruitFragment())
+        }
+
 
         // If a bluetooth device has been selected from SelectDeviceActivity
         deviceName = intent.getStringExtra("deviceName")
@@ -1137,5 +1202,12 @@ class FruitsVegsActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private  fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.FVlayout,fragment)
+        fragmentTransaction.addToBackStack(null).commit()
     }
 }

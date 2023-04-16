@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/desc"
-            android:text="Enter your email address"
+            android:text="Please enter your email address."
             android:textSize="16sp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
@@ -42,18 +42,18 @@
             app:layout_constraintBottom_toTopOf="@id/editBox" />
 
         <EditText
+            android:id="@+id/editBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editBox"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/toolbarIconColor"
+            android:maxLines="1"
             android:textColor="@color/textColorPrimary"
             android:textSize="16sp"
-            android:layout_marginStart="20sp"
-            android:backgroundTint="@color/toolbarIconColor"
-            android:layout_marginBottom="30dp"
-            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/forgotTitle"/>
+            app:layout_constraintTop_toBottomOf="@+id/desc" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCancel"
@@ -61,10 +61,13 @@
             android:layout_width="125dp"
             android:layout_height="48dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/raleway_bold"
             android:text="Cancel"
             android:textColor="#6D4C41"
             android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editBox" />
 
@@ -73,11 +76,14 @@
             style="@style/Widget.Kamatechs_App.Button"
             android:layout_width="125dp"
             android:layout_height="48dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="@font/raleway_bold"
             android:text="Reset"
             android:textColor="#6D4C41"
             android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editBox" />
 

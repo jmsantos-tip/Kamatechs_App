@@ -47,7 +47,7 @@
                         android:layout_marginEnd="52dp"
                         android:fontFamily="@font/raleway_bold"
                         android:textColor="@color/colorAccent"
-                        android:text="Your no. 1 go to storage configuration and real-time device status checker application for Tomato                    Cooling Storage Device"
+                        android:text="Your no. 1 go to storage configuration and real-time device status checker application for Tomato Cooling Storage Device"
                         android:textAlignment="center"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
