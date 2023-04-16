@@ -54,9 +54,10 @@
 
                     <TextView
                         style="@style/TextAppearance.Kamatechs_App.Subtitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="0dp"
+                        android:textAlignment="center"
                         android:text="Optimal Temperature (°C)"
                         android:textStyle="bold" />
 
@@ -119,9 +120,10 @@
 
                     <TextView
                         style="@style/TextAppearance.Kamatechs_App.Subtitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="0dp"
+                        android:textAlignment="center"
                         android:text="Optimal Humidity (%)"
                         android:textStyle="bold" />
 
@@ -130,7 +132,7 @@
                         android:id="@+id/humiIcon"
                         android:layout_width="56dp"
                         android:layout_height="40dp"
-                        android:layout_marginStart="40dp"
+                        android:layout_marginStart="0dp"
                         app:srcCompat="@drawable/baseline_water_drop_24" />
 
                 </LinearLayout>
@@ -183,9 +185,10 @@
 
                     <TextView
                         style="@style/TextAppearance.Kamatechs_App.Subtitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="0dp"
+                        android:textAlignment="center"
                         android:text="Approximate Storage Life"
                         android:textStyle="bold" />
 

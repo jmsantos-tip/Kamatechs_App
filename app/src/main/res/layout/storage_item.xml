@@ -12,11 +12,11 @@
         android:layout_width="350dp"
         android:layout_height="120dp"
         android:layout_marginVertical="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
@@ -32,9 +32,10 @@
             <TextView
                 android:id="@+id/tvDateTime"
                 style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="wrap_content"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="center"
                 android:text="2023-4-4 09:09:54"
                 android:textSize="16sp" />
 
@@ -42,13 +43,13 @@
                 android:id="@+id/dateIcon"
                 android:layout_width="56dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
                 app:srcCompat="@drawable/baseline_date_range_24" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
@@ -64,9 +65,10 @@
             <TextView
                 android:id="@+id/tvTemp"
                 style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="wrap_content"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="0dp"
+                android:textAlignment="center"
                 android:text="34"
                 android:textSize="16sp" />
 
@@ -74,13 +76,13 @@
                 android:id="@+id/tempIcon"
                 android:layout_width="56dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="102dp"
+                android:layout_marginStart="0dp"
                 app:srcCompat="@drawable/baseline_device_thermostat_24" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
@@ -96,9 +98,10 @@
             <TextView
                 android:id="@+id/tvHumid"
                 style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="wrap_content"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="66dp"
+                android:layout_marginStart="0dp"
+                android:textAlignment="center"
                 android:text="56"
                 android:textSize="16sp" />
 
@@ -106,7 +109,7 @@
                 android:id="@+id/humIcon"
                 android:layout_width="56dp"
                 android:layout_height="40dp"
-                android:layout_marginStart="102dp"
+                android:layout_marginStart="0dp"
                 app:srcCompat="@drawable/baseline_water_drop_24" />
 
         </LinearLayout>
