@@ -16,7 +16,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.kamatechs_app.databinding.ActivityFruitsVegsBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
@@ -28,11 +31,35 @@ class FruitsVegsActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fruits_vegs)
+        val binding = DataBindingUtil.setContentView<ActivityFruitsVegsBinding>(this, R.layout.activity_fruits_vegs)
 
         val actionbar = supportActionBar
         actionbar!!.title = "Storage Configuration"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
+        binding.bottomNavigation.selectedItemId = R.id.fruitsVegsActivity
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId){
+
+                R.id.homeActivity -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.fruitsVegsActivity -> {
+                    true
+                }
+                R.id.storageActivity -> {
+                    startActivity(Intent(this, StorageActivity::class.java))
+                    true
+                }
+                R.id.aboutActivity -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
 
         // UI Initialization
         val buttonConnect = findViewById<Button>(R.id.buttonConnect)
@@ -106,67 +133,83 @@ class FruitsVegsActivity : AppCompatActivity() {
 
         //Clickable fruits
         imageView.setOnClickListener {
-            replaceFragment(RipeTomatoFragment())
+            startActivity(Intent(this, RipeTomatoActivity::class.java))
+            true
         }
 
         imageView2.setOnClickListener {
-            replaceFragment(GreenTomatoFragment())
+            startActivity(Intent(this, GreenTomatoActivity::class.java))
+            true
         }
 
         imageView3.setOnClickListener {
-            replaceFragment(MangoFragment())
+            startActivity(Intent(this, MangoActivity::class.java))
+            true
         }
 
         imageView4.setOnClickListener {
-            replaceFragment(CucumberFragment())
+            startActivity(Intent(this, CucumberActivity::class.java))
+            true
         }
 
         imageView5.setOnClickListener {
-            replaceFragment(GreenBananaFragment())
+            startActivity(Intent(this, GreenBananaActivity::class.java))
+            true
         }
 
         imageView6.setOnClickListener {
-            replaceFragment(RipeBananaFragment())
+            startActivity(Intent(this, RipeBananaActivity::class.java))
+            true
         }
 
         imageView7.setOnClickListener {
-            replaceFragment(WatermelonFragment())
+            startActivity(Intent(this, WatermelonActivity::class.java))
+            true
         }
 
         imageView8.setOnClickListener {
-            replaceFragment(GingerRootFragment())
+            startActivity(Intent(this, GingerRootActivity::class.java))
+            true
         }
 
         imageView9.setOnClickListener {
-            replaceFragment(JicamaFragment())
+            startActivity(Intent(this, JicamaActivity::class.java))
+            true
         }
 
         imageView10.setOnClickListener {
-            replaceFragment(SweetPotatoFragment())
+            startActivity(Intent(this, SweetPotatoActivity::class.java))
+            true
         }
 
         imageView11.setOnClickListener {
-            replaceFragment(CoconutFragment())
+            startActivity(Intent(this, CoconutActivity::class.java))
+            true
         }
 
         imageView12.setOnClickListener {
-            replaceFragment(MelonFragment())
+            startActivity(Intent(this, MelonActivity::class.java))
+            true
         }
 
         imageView13.setOnClickListener {
-            replaceFragment(PumpkinFragment())
+            startActivity(Intent(this, PumpkinActivity::class.java))
+            true
         }
 
         imageView14.setOnClickListener {
-            replaceFragment(BasilFragment())
+            startActivity(Intent(this, BasilActivity::class.java))
+            true
         }
 
         imageView15.setOnClickListener {
-            replaceFragment(LemonFragment())
+            startActivity(Intent(this, LemonActivity::class.java))
+            true
         }
 
         imageView16.setOnClickListener {
-            replaceFragment(GrapeFruitFragment())
+            startActivity(Intent(this, GrapeFruitActivity::class.java))
+            true
         }
 
 
@@ -1202,12 +1245,5 @@ class FruitsVegsActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    private  fun replaceFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.FVlayout,fragment)
-        fragmentTransaction.addToBackStack(null).commit()
     }
 }

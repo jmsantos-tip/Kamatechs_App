@@ -52,14 +52,7 @@ class SelectDeviceActivity : AppCompatActivity() {
             }
         } else {
             // Bluetooth is not enabled, show a message to the user
-            val view = findViewById<View>(R.id.recyclerViewDevice)
-            val snackbar = Snackbar.make(
-                view,
-                "Activate Bluetooth or pair a Bluetooth device",
-                Snackbar.LENGTH_INDEFINITE
-            )
-            snackbar.setAction("OK") { }
-            snackbar.show()
+            Toast.makeText(this, "Activate Bluetooth or pair a Bluetooth device", Toast.LENGTH_LONG).show()
         }
     }
 

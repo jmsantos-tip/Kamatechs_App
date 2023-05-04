@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kamatechs_app.databinding.ActivityStorageBinding
 import com.google.firebase.database.*
 
 class StorageActivity : AppCompatActivity() {
@@ -19,7 +21,7 @@ class StorageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_storage)
+        val binding = DataBindingUtil.setContentView<ActivityStorageBinding>(this, R.layout.activity_storage)
 
         storageRecyclerview = findViewById(R.id.storageList)
         storageRecyclerview.layoutManager = LinearLayoutManager(this)
@@ -31,6 +33,31 @@ class StorageActivity : AppCompatActivity() {
         val actionbar = supportActionBar
         actionbar!!.title = "Storage Device Status"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
+        binding.bottomNavigation.selectedItemId = R.id.storageActivity
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId){
+
+                R.id.homeActivity -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.fruitsVegsActivity -> {
+                    startActivity(Intent(this, FruitsVegsActivity::class.java))
+                    true
+                }
+                R.id.storageActivity -> {
+                    startActivity(Intent(this, StorageActivity::class.java))
+                    true
+                }
+                R.id.aboutActivity -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
     }
     private fun getStorageData() {
 

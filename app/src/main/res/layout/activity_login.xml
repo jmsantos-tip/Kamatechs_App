@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="102dp"
-            android:layout_height="84dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="152dp"
             android:layout_marginTop="50dp"
@@ -26,22 +26,26 @@
 
         <TextView
             android:id="@+id/txtTitle"
-            style="@style/TextAppearance.Kamatechs_App.Title"
+            android:fontFamily="@font/raleway_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="KAMATECHS"
+            android:textColor="@color/colorAccent"
+            android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/txtLogin"
-            style="@style/TextAppearance.Kamatechs_App.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:fontFamily="@font/raleway"
+            android:textColor="@color/colorAccent"
             android:text="Sign in to Kamatechs"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +66,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
+                android:fontFamily="@font/raleway"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1" />
@@ -83,6 +88,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_edit_text"
+                android:fontFamily="@font/raleway"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -97,36 +103,37 @@
             android:layout_height="48dp"
             android:layout_marginStart="162dp"
             android:layout_marginEnd="161dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="Login"
-            android:textSize="18dp"
-            android:textColor="#6D4C41"
+            android:text="SIGN IN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginPW" />
 
         <TextView
             android:id="@+id/forgotPW"
-            style="@style/TextAppearance.Kamatechs_App.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="136dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="137dp"
             android:text="Forgot Password?"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/raleway"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
         <TextView
             android:id="@+id/redirectSignUp"
-            style="@style/TextAppearance.Kamatechs_App.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="103dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="102dp"
+            android:textColor="@color/colorAccent"
             android:text="Don't have an account? Sign Up"
+            android:textSize="16sp"
+            android:fontFamily="@font/raleway"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/forgotPW" />

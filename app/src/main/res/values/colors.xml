@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
         <!--    <color name="colorAccent">#E0E0E0</color>-->
-    <color name="colorAccent">@color/textColorPrimary</color>
-    <color name="colorPrimary">#FBB8AC</color>
-    <color name="colorPrimaryDark">#FEDBD0</color>
-    <color name="textColorPrimary">#442C2E</color>
-    <color name="toolbarIconColor">@color/textColorPrimary</color>
-    <color name="textInputOutlineColor">#FBB8AC</color>
-    <color name="navheader">#FBB8AC</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorPrimary">#588157</color>
+    <color name="colorPrimaryDark">#A3B18A</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="toolbarIconColor">#FFFFFF</color>
+    <color name="textInputOutlineColor">@color/colorPrimaryDark</color>
+    <color name="navheader">@color/colorPrimary</color>
     <color name="colorOff">	#FFFFFF</color>
-    <color name="colorOn">#FBB8AC</color>
+    <color name="colorOn">@color/colorPrimary</color>
+    <color name="colorButtonNormal">#3A5A40</color>
 </resources>

@@ -10,7 +10,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.kamatechs_app.databinding.ActivityLoginBinding
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.core.view.View
 
 class LoginActivity : AppCompatActivity() {
 
@@ -23,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val actionbar = supportActionBar
-        actionbar!!.title = "Login"
+        actionbar!!.title = "Sign In"
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding.btnLogin.setOnClickListener {
@@ -34,10 +36,10 @@ class LoginActivity : AppCompatActivity() {
                     if (it.isSuccessful){
                         val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
-                        Toast.makeText(this, "Login Successfully.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Signed in successfully.", Toast.LENGTH_SHORT).show()
 
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Email or password is incorrect.", Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {

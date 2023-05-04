@@ -4,21 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/loginActivity">
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.example.kamatechs_app.AboutFragment"
-        android:label="fragment_about"
-        tools:layout="@layout/fragment_about" />
-    <fragment
-        android:id="@+id/developersFragment"
-        android:name="com.example.kamatechs_app.DevelopersFragment"
-        android:label="fragment_developers"
-        tools:layout="@layout/fragment_developers" />
-    <fragment
-        android:id="@+id/FAQFragment"
-        android:name="com.example.kamatechs_app.FAQFragment"
-        android:label="fragment_f_a_q"
-        tools:layout="@layout/fragment_f_a_q" />
     <activity
         android:id="@+id/storageActivity"
         android:name="com.example.kamatechs_app.StorageActivity"
@@ -44,4 +29,19 @@
         android:name="com.example.kamatechs_app.FruitsVegsActivity"
         android:label="activity_fruits_vegs"
         tools:layout="@layout/activity_fruits_vegs" />
+    <activity
+        android:id="@+id/aboutActivity"
+        android:name="com.example.kamatechs_app.AboutActivity"
+        android:label="activity_about"
+        tools:layout="@layout/activity_about" />
+    <activity
+        android:id="@+id/FAQActivity"
+        android:name="com.example.kamatechs_app.FAQActivity"
+        android:label="activity_faq"
+        tools:layout="@layout/activity_faq" />
+    <activity
+        android:id="@+id/developersActivity"
+        android:name="com.example.kamatechs_app.DevelopersActivity"
+        android:label="activity_developers"
+        tools:layout="@layout/activity_developers" />
 </navigation>

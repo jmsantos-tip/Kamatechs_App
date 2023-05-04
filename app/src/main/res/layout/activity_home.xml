@@ -26,101 +26,48 @@
 
                     <TextView
                         android:id="@+id/welcomeHome"
-                        android:layout_width="312dp"
-                        android:layout_height="84dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="51dp"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="60dp"
                         android:layout_marginEnd="50dp"
                         android:text="Welcome to Kamatechs"
                         android:textAlignment="center"
+                        android:fontFamily="@font/raleway_bold"
                         android:textAppearance="@style/TextAppearance.Kamatechs_App.Title"
+                        android:textSize="40sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/definition"
-                        android:layout_width="336dp"
-                        android:layout_height="91dp"
-                        android:layout_marginStart="61dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="52dp"
-                        android:fontFamily="@font/raleway_bold"
-                        android:textColor="@color/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/raleway"
                         android:text="Your no. 1 go-to storage configuration and real-time device status checker application for Tomato Cooling Storage Device"
                         android:textAlignment="center"
-                        android:textSize="18sp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="22sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.539"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/welcomeHome" />
+                        app:layout_constraintTop_toBottomOf="@+id/imgTomato" />
 
                     <ImageView
                         android:id="@+id/imgTomato"
-                        android:layout_width="228dp"
-                        android:layout_height="246dp"
+                        android:layout_width="270dp"
+                        android:layout_height="270dp"
                         android:layout_marginStart="79dp"
+                        android:layout_marginTop="32dp"
                         android:layout_marginEnd="80dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/definition"
+                        app:layout_constraintTop_toBottomOf="@+id/welcomeHome"
                         app:srcCompat="@drawable/logo2" />
 
-
-                    <TextView
-                        android:id="@+id/txtSD"
-                        android:layout_width="138dp"
-                        android:layout_height="52dp"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_marginEnd="33dp"
-                        android:text="Storage Device Status"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.Kamatechs_App.Text"
-                        android:textSize="18sp"
-                        app:layout_constraintEnd_toStartOf="@+id/btnStorage"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/txtFV" />
-
-                    <ImageButton
-                        android:id="@+id/btnStorage"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="50dp"
-                        android:background="@color/colorPrimary"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/txtSD"
-                        app:layout_constraintTop_toBottomOf="@+id/btnFV"
-                        app:srcCompat="@drawable/baseline_inventory_24" />
-
-                    <ImageButton
-                        android:id="@+id/btnFV"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="150dp"
-                        android:layout_height="70dp"
-                        android:layout_marginEnd="50dp"
-                        android:background="@color/colorPrimary"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/txtFV"
-                        app:layout_constraintTop_toBottomOf="@+id/imgTomato"
-                        app:srcCompat="@drawable/baseline_set" />
-
-                    <TextView
-                        android:id="@+id/txtFV"
-                        android:layout_width="138dp"
-                        android:layout_height="52dp"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="33dp"
-                        android:text="Storage Configuration"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.Kamatechs_App.Text"
-                        android:textSize="18sp"
-                        app:layout_constraintEnd_toStartOf="@+id/btnFV"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imgTomato" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
@@ -133,6 +80,7 @@
                 android:keepScreenOn="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_nav"
+                app:labelVisibilityMode="auto"
                 style="@style/Widget.App.BottomNavigationView"/>
 
         </RelativeLayout>

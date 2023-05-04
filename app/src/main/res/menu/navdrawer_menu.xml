@@ -4,34 +4,34 @@
 
     <item
         android:id="@+id/homeActivity"
-        android:icon="@drawable/baseline_home_24"
+        android:icon="@drawable/home"
         android:title="Home" />
 
     <item android:title="Features">
         <menu>
             <item
                 android:id="@+id/fruitsVegsActivity"
-                android:icon="@drawable/baseline_settings_24"
-                android:title="Storage Configuration" />
+                android:icon="@drawable/settings"
+                android:title="Configuration" />
             <item
                 android:id="@+id/storageActivity"
-                android:icon="@drawable/baseline_sto"
-                android:title="Storage Device Status" />
+                android:icon="@drawable/coldstorage"
+                android:title="Status" />
         </menu>
     </item>
     <item android:title="Support">
         <menu>
             <item
-                android:id="@+id/aboutFragment"
-                android:icon="@drawable/baseline_info_24"
+                android:id="@+id/aboutActivity"
+                android:icon="@drawable/information"
                 android:title="About" />
             <item
-                android:id="@+id/FAQFragment"
-                android:icon="@drawable/baseline_question_answer_24"
+                android:id="@+id/FAQActivity"
+                android:icon="@drawable/chat"
                 android:title="FAQ" />
             <item
-                android:id="@+id/developersFragment"
-                android:icon="@drawable/baseline_developer_mode_24"
+                android:id="@+id/developersActivity"
+                android:icon="@drawable/coding"
                 android:title="Developers" />
         </menu>
     </item>

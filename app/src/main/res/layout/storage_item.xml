@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
     app:cardCornerRadius="10dp"
-    android:layout_margin="16dp">
+    android:layout_margin="12dp">
 
     <LinearLayout
         android:layout_width="350dp"
@@ -22,29 +22,30 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/TextAppearance.Kamatechs_App.Subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Updated as of:"
-                android:textStyle="bold"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/colorAccent"
                 android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/tvDateTime"
-                style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="160dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/colorAccent"
+                android:layout_width="166dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
                 android:textAlignment="center"
                 android:text="2023-4-4 09:09:54"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/dateIcon"
-                android:layout_width="56dp"
+                android:layout_width="30dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="0dp"
-                app:srcCompat="@drawable/baseline_date_range_24" />
+                app:srcCompat="@drawable/calendar" />
 
         </LinearLayout>
 
@@ -55,7 +56,8 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/TextAppearance.Kamatechs_App.Subtitle"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/colorAccent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temperature:"
@@ -64,20 +66,21 @@
 
             <TextView
                 android:id="@+id/tvTemp"
-                style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="180dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/colorAccent"
+                android:layout_width="183dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:textAlignment="center"
                 android:text="34"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/tempIcon"
-                android:layout_width="56dp"
+                android:layout_width="30dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="0dp"
-                app:srcCompat="@drawable/baseline_device_thermostat_24" />
+                app:srcCompat="@drawable/centigrade" />
 
         </LinearLayout>
 
@@ -88,7 +91,8 @@
             android:orientation="horizontal">
 
             <TextView
-                style="@style/TextAppearance.Kamatechs_App.Subtitle"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/colorAccent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Humidity:"
@@ -97,20 +101,21 @@
 
             <TextView
                 android:id="@+id/tvHumid"
-                style="@style/TextAppearance.Kamatechs_App.Text"
-                android:layout_width="210dp"
+                android:fontFamily="@font/raleway"
+                android:textColor="@color/colorAccent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
                 android:textAlignment="center"
                 android:text="56"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/humIcon"
-                android:layout_width="56dp"
+                android:layout_width="30dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="0dp"
-                app:srcCompat="@drawable/baseline_water_drop_24" />
+                app:srcCompat="@drawable/humidity" />
 
         </LinearLayout>
 
@@ -142,7 +147,7 @@
                 android:layout_width="56dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="120dp"
-                app:srcCompat="@drawable/baseline_device_thermostat_24" />
+                app:srcCompat="@drawable/hottemp" />
 
         </LinearLayout>
 

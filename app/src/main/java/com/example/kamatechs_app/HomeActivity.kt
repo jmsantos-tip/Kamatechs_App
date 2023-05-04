@@ -23,16 +23,6 @@ class HomeActivity : AppCompatActivity() {
         )
         supportActionBar?.title = "Home"
 
-        binding.btnStorage.setOnClickListener {
-            startActivity(Intent(this, StorageActivity::class.java))
-            true
-        }
-
-        binding.btnFV.setOnClickListener {
-            startActivity(Intent(this, FruitsVegsActivity::class.java))
-            true
-        }
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView : NavigationView = binding.navView
@@ -49,44 +39,48 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.storageActivity -> {
-                    startActivity(Intent(this, StorageActivity::class.java))
-                    true
-                }
-
                 R.id.fruitsVegsActivity -> {
                     startActivity(Intent(this, FruitsVegsActivity::class.java))
                     true
                 }
-                R.id.aboutFragment -> {
-                    replaceFragment(AboutFragment())
+                R.id.storageActivity -> {
+                    startActivity(Intent(this, StorageActivity::class.java))
                     true
                 }
-                R.id.FAQFragment -> {
-                    replaceFragment(FAQFragment())
+                R.id.aboutActivity -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
                     true
                 }
-                R.id.developersFragment -> {
-                    replaceFragment(DevelopersFragment())
+                R.id.FAQActivity -> {
+                    startActivity(Intent(this, FAQActivity::class.java))
+                    true
+                }
+                R.id.developersActivity -> {
+                    startActivity(Intent(this, DevelopersActivity::class.java))
                     true
                 }
                 else -> false
             }
         }
 
+        binding.bottomNavigation.selectedItemId = R.id.homeActivity
+
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when(item.itemId){
 
                 R.id.homeActivity -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
-                R.id.aboutFragment -> {
-                    replaceFragment(AboutFragment())
+                R.id.fruitsVegsActivity -> {
+                    startActivity(Intent(this, FruitsVegsActivity::class.java))
                     true
                 }
-                R.id.FAQFragment -> {
-                    replaceFragment(FAQFragment())
+                R.id.storageActivity -> {
+                    startActivity(Intent(this, StorageActivity::class.java))
+                    true
+                }
+                R.id.aboutActivity -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
                     true
                 }
                 else -> false
@@ -102,8 +96,9 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.aboutFragment -> {
-                replaceFragment(AboutFragment())
+            R.id.aboutActivity -> {
+                startActivity(Intent(this, AboutActivity::class.java))
+                true
             }
         }
         if(toggle.onOptionsItemSelected(item)){

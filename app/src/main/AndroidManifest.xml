@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kamatechs_app">
-
-
     <!-- Request legacy Bluetooth permissions on older devices. -->
     <uses-permission
         android:name="android.permission.BLUETOOTH"
@@ -37,11 +35,68 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kamatechs_App"
         tools:targetApi="31">
+        <activity
+            android:name=".WatermelonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SweetPotatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RipeBananaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PumpkinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MelonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MangoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LemonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JicamaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GreenTomatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GreenBananaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GrapeFruitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GingerRootActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CucumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoconutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RipeTomatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DevelopersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
         <activity
             android:name=".SelectDeviceActivity"
             android:exported="false" />
