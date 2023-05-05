@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:text="Loading..."
             android:textSize="28sp"
-            android:fontFamily="@font/raleway"
+            android:fontFamily="@font/open_sans"
             android:textColor="@color/textColorPrimary"
             android:textStyle="italic"
             android:visibility="gone"

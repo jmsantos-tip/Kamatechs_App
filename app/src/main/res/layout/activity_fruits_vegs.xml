@@ -69,7 +69,7 @@
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.061"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/linear"
                             app:srcCompat="@drawable/tomato" />
@@ -112,13 +112,10 @@
                         style="@style/Widget.Kamatechs_App.Button"
                         android:layout_width="330dp"
                         android:layout_height="48dp"
-                        android:layout_marginTop="4dp"
                         android:text="Matured Green Tomato"
                         android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.351"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                        app:layout_constraintHorizontal_bias="0.35" />
+
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -134,7 +131,7 @@
                             android:layout_width="330dp"
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.935"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/mango"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -144,13 +141,9 @@
                         style="@style/Widget.Kamatechs_App.Button"
                         android:layout_width="330dp"
                         android:layout_height="48dp"
-                        android:layout_marginTop="4dp"
                         android:text="Mango"
                         android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.938"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -165,7 +158,7 @@
                             android:layout_width="330dp"
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.646"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/cucumber"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -177,7 +170,7 @@
                         android:layout_height="48dp"
                         android:text="Cucumber"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.648" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -193,7 +186,7 @@
                             android:layout_width="330dp"
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/green_banana"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -206,7 +199,7 @@
                         android:text="Green Banana"
                         android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.651"
+                        app:layout_constraintHorizontal_bias="0.35"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -225,7 +218,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.353"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/banana"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -237,7 +230,7 @@
                         android:layout_height="48dp"
                         android:text="Ripe Banana"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.354" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -254,7 +247,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.064"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/watermelon"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -267,7 +260,7 @@
                         android:text="Watermelon"
                         android:textSize="20sp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.064"
+                        app:layout_constraintHorizontal_bias="0.35"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -286,7 +279,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.938"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/ginger"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -314,7 +307,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.941"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/jicama"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -326,7 +319,7 @@
                         android:layout_height="48dp"
                         android:text="Jicama"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.947" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -343,7 +336,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.067"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/sweet_potato_"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -355,7 +348,7 @@
                         android:layout_height="48dp"
                         android:text="Sweet Potato"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.067" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -372,7 +365,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.356"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/coconut"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -400,7 +393,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.36"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/melon"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -412,7 +405,7 @@
                         android:layout_height="48dp"
                         android:text="Melon"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.361" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -429,7 +422,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.944"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/pumpkin"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -441,7 +434,7 @@
                         android:layout_height="48dp"
                         android:text="Pumpkin"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.95" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -458,7 +451,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.07"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/basil"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -470,7 +463,7 @@
                         android:layout_height="48dp"
                         android:text="Basil"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.07" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -487,7 +480,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.655"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:srcCompat="@drawable/lemon"
                             tools:ignore="VectorDrawableCompat" />
                     </com.google.android.material.card.MaterialCardView>
@@ -499,7 +492,7 @@
                         android:layout_height="48dp"
                         android:text="Lemon"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.657" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="330dp"
@@ -516,7 +509,7 @@
                             android:layout_height="200dp"
                             android:background="@color/colorOff"
                             android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.652"
+                            app:layout_constraintHorizontal_bias="0.35"
                             app:layout_constraintStart_toStartOf="parent"
                             app:srcCompat="@drawable/grape"
                             tools:ignore="VectorDrawableCompat" />
@@ -529,7 +522,7 @@
                         android:layout_height="48dp"
                         android:text="Grape fruit"
                         android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.654" />
+                        app:layout_constraintHorizontal_bias="0.35" />
 
                     <TextView
                         android:layout_width="300dp"

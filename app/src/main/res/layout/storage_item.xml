@@ -31,7 +31,7 @@
 
             <TextView
                 android:id="@+id/tvDateTime"
-                android:fontFamily="@font/raleway"
+                android:fontFamily="@font/open_sans"
                 android:textColor="@color/colorAccent"
                 android:layout_width="166dp"
                 android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 
             <TextView
                 android:id="@+id/tvTemp"
-                android:fontFamily="@font/raleway"
+                android:fontFamily="@font/open_sans"
                 android:textColor="@color/colorAccent"
                 android:layout_width="183dp"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
 
             <TextView
                 android:id="@+id/tvHumid"
-                android:fontFamily="@font/raleway"
+                android:fontFamily="@font/open_sans"
                 android:textColor="@color/colorAccent"
                 android:layout_width="215dp"
                 android:layout_height="wrap_content"

@@ -82,13 +82,13 @@
 
                     <TextView
                         android:id="@+id/tvDateTime"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="40dp"
                         android:text="2023-4-4 09:09:50"
-                        android:textSize="22sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -151,13 +151,13 @@
 
                     <TextView
                         android:id="@+id/tvRoomTemp"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="85dp"
                         android:text="12"
-                        android:textSize="22sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
 
@@ -197,13 +197,13 @@
 
                     <TextView
                         android:id="@+id/tvTemp"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="85dp"
                         android:text="12"
-                        android:textSize="22sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
 
@@ -243,18 +243,29 @@
 
                     <TextView
                         android:id="@+id/tvHumid"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="85dp"
                         android:text="91"
-                        android:textSize="22sp" />
+                        android:textSize="24sp" />
 
                 </LinearLayout>
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:keepScreenOn="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_nav"
+            app:labelVisibilityMode="selected"
+            style="@style/Widget.App.BottomNavigationView"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

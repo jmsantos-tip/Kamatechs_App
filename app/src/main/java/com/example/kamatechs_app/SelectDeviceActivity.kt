@@ -25,7 +25,7 @@ class SelectDeviceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_select_device)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Select Device"
+        actionbar!!.title = "Select a Device"
         actionbar.setDisplayHomeAsUpEnabled(true)
 
         // Bluetooth Setup

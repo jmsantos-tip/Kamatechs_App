@@ -81,7 +81,7 @@
 
                     <TextView
                         android:id="@+id/JTemp"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -150,7 +150,7 @@
 
                     <TextView
                         android:id="@+id/JHumi"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
 
                     <TextView
                         android:id="@+id/JLife"
-                        android:fontFamily="@font/raleway"
+                        android:fontFamily="@font/open_sans"
                         android:textColor="@color/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -229,6 +229,17 @@
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:keepScreenOn="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_nav"
+            app:labelVisibilityMode="selected"
+            style="@style/Widget.App.BottomNavigationView"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
