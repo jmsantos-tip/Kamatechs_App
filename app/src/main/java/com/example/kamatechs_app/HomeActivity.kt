@@ -10,6 +10,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.kamatechs_app.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+
+
+
 
 
 class HomeActivity : AppCompatActivity() {
@@ -22,7 +26,6 @@ class HomeActivity : AppCompatActivity() {
             R.layout.activity_home
         )
         supportActionBar?.title = "Home"
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView : NavigationView = binding.navView
@@ -59,6 +62,16 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(Intent(this, DevelopersActivity::class.java))
                     true
                 }
+                R.id.signOutActivity -> {
+                    val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                    mAuth.signOut()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+
                 else -> false
             }
         }

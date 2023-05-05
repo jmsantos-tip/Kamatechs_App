@@ -1,27 +1,46 @@
 <resources xmlns:android="http://schemas.android.com/tools" xmlns:tools="http://schemas.android.com/apk/res-auto" android:ignore="NamespaceTypo">
 
     <!-- Base application theme. -->
-    <style name="Theme.Kamatechs_App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Kamatechs_App" parent="Theme.Material3.DayNight">
         <!-- Customize your theme here. -->
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="colorOnSurface">@color/colorOff</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorPrimary">@color/colorOff</item>
         <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="navigationViewStyle">@style/Widget.App.NavigationView</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
     </style>
 
-    <style name="Widget.Kamatechs_App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Toolbar" parent="">
+        <item name="android:textColor">@color/colorOff</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.Kamatechs_App.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="hintTextAppearance">@style/TextAppearance.Kamatechs_App.TextInputLayout.HintText</item>
         <item name="hintTextColor">@color/textColorPrimary</item>
         <item name="android:paddingBottom">8dp</item>
         <item name="boxStrokeColor">@color/textInputOutlineColor</item>
+
     </style>
 
     <style name="TextAppearance.Kamatechs_App.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
-    <style name="Widget.Kamatechs_App.Button" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.Kamatechs_App.Button" parent="Widget.Material3.Button">
         <item name="backgroundTint">@color/colorButtonNormal</item>
         <item name ="android:textSize">18dp</item>
         <item name="android:textColor">#FFFFFF</item>
@@ -33,14 +52,14 @@
     </style>
 
 
-    <style name="Widget.Kamatechs_App.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="Widget.Kamatechs_App.Button.TextButton" parent="Widget.Material3.Button.TextButton">
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
-    <style name="Widget.Kamatechs.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="Widget.Kamatechs.Toolbar" parent="Widget.Material3.Toolbar">
         <item name="android:background">@color/colorAccent</item>
         <item name="android:theme">@style/Theme.Kamatechs_App</item>
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="popupTheme">@style/Theme.Material3.DayNight</item>
         <item name="titleTextAppearance">@style/TextAppearance.Kamatechs_App.Toolbar</item>
     </style>
 
@@ -79,13 +98,28 @@
         <item name="colorOnSurface">@color/textColorPrimary</item>
     </style>
 
-    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
     </style>
 
     <style name="ThemeOverlay.App.BottomNavigationView" parent="">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/toolbarIconColor</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/colorOff</item>
+        <item name="colorOnSurfaceVariant">@color/colorOff</item>
+    </style>
+
+    <style name="Widget.App.NavigationView" parent="Widget.Material3.NavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.NavigationView</item>
+        <item name="itemIconTint">@color/colorPrimaryDark</item>
+        <item name="itemTextColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="ThemeOverlay.App.NavigationView" parent="">
+        <item name="colorSurface">@color/colorOff</item>
+        <item name="colorOnSurface">@color/colorAccent</item>
+        <item name="colorOnSurfaceVariant">@color/colorAccent</item>
+        <item name="colorOutline">@color/colorPrimaryDark</item>
     </style>
 
 </resources>

@@ -5,7 +5,7 @@
     <color name="colorPrimary">#3A5A40</color>
     <color name="colorPrimaryDark">#588157</color>
     <color name="textColorPrimary">#000000</color>
-    <color name="toolbarIconColor">#FFFFFF</color>
+    <color name="toolbarIconColor">#3A5A40</color>
     <color name="textInputOutlineColor">@color/colorPrimary</color>
     <color name="navheader">@color/colorPrimaryDark</color>
     <color name="colorOff">	#FFFFFF</color>

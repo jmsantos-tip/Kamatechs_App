@@ -81,7 +81,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_nav"
                 app:labelVisibilityMode="auto"
-                style="@style/Widget.App.BottomNavigationView"/>
+                style="@style/Widget.Material3.BottomNavigationView"/>
 
         </RelativeLayout>
 

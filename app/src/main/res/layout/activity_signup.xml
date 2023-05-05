@@ -65,6 +65,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email2_edit_text"
                 android:fontFamily="@font/open_sans"
+                android:textColor="@color/textColorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -88,6 +89,7 @@
                 android:id="@+id/password2_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textColorPrimary"
                 android:fontFamily="@font/open_sans"
                 android:inputType="textPassword"
                 app:layout_constraintTop_toBottomOf="@+id/signupEmail" />
@@ -112,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans"
+                android:textColor="@color/textColorPrimary"
                 android:inputType="textPassword"
                 app:layout_constraintTop_toBottomOf="@+id/signupPW" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -120,9 +123,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignup"
             style="@style/Widget.Kamatechs_App.Button"
-            android:layout_width="350dp"
-            android:layout_height="48dp"
-            android:text="Sign Up"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/confirmPW" />
