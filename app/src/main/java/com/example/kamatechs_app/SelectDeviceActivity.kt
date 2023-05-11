@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import android.Manifest
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+import com.google.firebase.auth.FirebaseAuth
 
 
 class SelectDeviceActivity : AppCompatActivity() {
@@ -97,6 +101,29 @@ class SelectDeviceActivity : AppCompatActivity() {
             recyclerView.adapter = deviceListAdapter
             recyclerView.itemAnimator = DefaultItemAnimator()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.options_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+
+            R.id.signOutActivity -> {
+                val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                mAuth.signOut()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(intent)
+                finish()
+                Toast.makeText(this, "Signed out successfully.", Toast.LENGTH_SHORT).show()
+                true
+
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {

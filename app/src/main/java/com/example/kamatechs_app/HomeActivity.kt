@@ -112,8 +112,15 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.aboutActivity -> {
-                startActivity(Intent(this, AboutActivity::class.java))
+
+            R.id.signOutActivity -> {
+                val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                mAuth.signOut()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(intent)
+                finish()
+                Toast.makeText(this, "Signed out successfully.", Toast.LENGTH_SHORT).show()
                 true
             }
         }
@@ -122,11 +129,11 @@ class HomeActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    private  fun replaceFragment(fragment: Fragment){
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.homelayout,fragment)
-        fragmentTransaction.addToBackStack(null).commit()
-    }
+//    private  fun replaceFragment(fragment: Fragment){
+//        val fragmentManager = supportFragmentManager
+//        val fragmentTransaction = fragmentManager.beginTransaction()
+//        fragmentTransaction.replace(R.id.homelayout,fragment)
+//        fragmentTransaction.addToBackStack(null).commit()
+//    }
 
 }

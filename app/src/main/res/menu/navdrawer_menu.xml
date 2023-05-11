@@ -40,7 +40,7 @@
         <item
             android:id="@+id/signOutActivity"
             android:icon="@drawable/exit"
-            android:title="Sign Out" />
+            android:title="Sign out" />
         </menu>
     </item>
 </menu>

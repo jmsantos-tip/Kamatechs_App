@@ -10,24 +10,34 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.kamatechs_app.databinding.ActivityFruitsVegsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 import java.util.*
 
 class FruitsVegsActivity : AppCompatActivity() {
+
     private var deviceName: String? = null
     private var deviceAddress: String? = null
+    private lateinit var toggle: ActionBarDrawerToggle
+
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +46,57 @@ class FruitsVegsActivity : AppCompatActivity() {
         val actionbar = supportActionBar
         actionbar!!.title = "Storage Configuration"
         actionbar.setDisplayHomeAsUpEnabled(true)
+
+        val drawerLayout: DrawerLayout = binding.drawerLayout
+        val navView : NavigationView = binding.navView
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.homeActivity -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+
+                R.id.fruitsVegsActivity -> {
+                    startActivity(Intent(this, FruitsVegsActivity::class.java))
+                    true
+                }
+                R.id.storageActivity -> {
+                    startActivity(Intent(this, StorageActivity::class.java))
+                    true
+                }
+                R.id.aboutActivity -> {
+                    startActivity(Intent(this, AboutActivity::class.java))
+                    true
+                }
+                R.id.FAQActivity -> {
+                    startActivity(Intent(this, FAQActivity::class.java))
+                    true
+                }
+                R.id.developersActivity -> {
+                    startActivity(Intent(this, DevelopersActivity::class.java))
+                    true
+                }
+                R.id.signOutActivity -> {
+                    val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                    mAuth.signOut()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    startActivity(intent)
+                    finish()
+                    Toast.makeText(this, "Signed out successfully.", Toast.LENGTH_SHORT).show()
+                    true
+
+                }
+
+                else -> false
+            }
+        }
 
         binding.bottomNavigation.selectedItemId = R.id.fruitsVegsActivity
 
@@ -59,7 +120,9 @@ class FruitsVegsActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+
         }
+
 
         // UI Initialization
         val buttonConnect = findViewById<Button>(R.id.buttonConnect)
@@ -1242,8 +1305,35 @@ class FruitsVegsActivity : AppCompatActivity() {
         private const val MESSAGE_READ = 2 // used in bluetooth handler to identify message update
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.options_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+
+            R.id.signOutActivity -> {
+                val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+                mAuth.signOut()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                startActivity(intent)
+                finish()
+                Toast.makeText(this, "Signed out successfully.", Toast.LENGTH_SHORT).show()
+                true
+
+            }
+        }
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+//    override fun onSupportNavigateUp(): Boolean {
+//        onBackPressed()
+//        return true
+//    }
 }

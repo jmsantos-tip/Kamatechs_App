@@ -3,47 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".StorageActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient_bg">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/storageList"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/storage_item" />
+            android:background="@drawable/gradient_bg">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storageList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/storage_item" />
 
 
-        <TextView
-            android:id="@+id/tvLoadingData"
+            <TextView
+                android:id="@+id/tvLoadingData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="28sp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="italic"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentBottom="true"
+                android:keepScreenOn="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_nav"
+                app:labelVisibilityMode="auto"
+                style="@style/Widget.Material3.BottomNavigationView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Loading..."
-            android:textSize="28sp"
-            android:fontFamily="@font/open_sans"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="italic"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
+    </androidx.drawerlayout.widget.DrawerLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:keepScreenOn="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_nav"
-            app:labelVisibilityMode="auto"
-            style="@style/Widget.Material3.BottomNavigationView"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

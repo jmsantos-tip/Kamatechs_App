@@ -15,7 +15,7 @@ class SignupActivity : AppCompatActivity() {
         binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val actionbar = supportActionBar
-        actionbar!!.title = "Sign Up"
+        actionbar!!.title = "Sign up"
         firebaseAuth = FirebaseAuth.getInstance()
         binding.btnSignup.setOnClickListener{
             val email = binding.email2EditText.text.toString()

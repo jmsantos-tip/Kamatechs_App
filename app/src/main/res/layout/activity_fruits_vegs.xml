@@ -4,574 +4,589 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".FruitsVegsActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constrainLayout"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient_bg">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:subtitleTextColor="@android:color/background_light"
-            app:title="Fruits and Vegetables"
-            app:titleTextColor="@android:color/background_light" />
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg">
 
-
-        <FrameLayout
-            android:id="@+id/FVlayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-            <ScrollView
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="4dp"
-                android:foregroundGravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"
+                android:background="#DBD7D2"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="Fruits and Vegetables"
+                app:titleTextColor="@color/colorAccent" />
+
+
+            <FrameLayout
+                android:id="@+id/FVlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-                <LinearLayout
-                    android:id="@+id/linear"
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:foregroundGravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp">
 
-                        <ImageView
-                            android:id="@+id/imageView"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/linear"
+                                app:srcCompat="@drawable/tomato" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Ripe Tomato"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="330dp"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                                app:srcCompat="@drawable/green_tomato"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle2"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Matured Green Tomato"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="330dp"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/mango"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle3"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Mango"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="330dp"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/cucumber"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle4"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Cucumber"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="330dp"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView16"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/green_banana"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle14"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Green Banana"
+                            android:textSize="20sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.35"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/linear"
-                            app:srcCompat="@drawable/tomato" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <Button
-                        android:id="@+id/buttonToggle"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Ripe Tomato"
-                        android:textSize="20sp" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView2"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView15"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/banana"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle15"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Ripe Banana"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="330dp"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+                            <ImageView
+                                android:id="@+id/imageView14"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/watermelon"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <Button
+                            android:id="@+id/buttonToggle16"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Watermelon"
+                            android:textSize="20sp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.35"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-                            app:srcCompat="@drawable/green_tomato"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-                    <Button
-                        android:id="@+id/buttonToggle2"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Matured Green Tomato"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
-
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView3"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/mango"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle3"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Mango"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/ginger"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-                        <ImageView
-                            android:id="@+id/imageView4"
+                        <Button
+                            android:id="@+id/buttonToggle13"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Ginger Root"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/cucumber"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle4"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Cucumber"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                            <ImageView
+                                android:id="@+id/imageView33"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/jicama"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle33"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Jicama"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView16"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/green_banana"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle14"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Green Banana"
-                        android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.35"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+                            <ImageView
+                                android:id="@+id/imageView34"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/sweet_potato_"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle36"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Sweet Potato"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView15"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/banana"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle15"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Ripe Banana"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                            <ImageView
+                                android:id="@+id/imageView35"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/coconut"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle35"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Coconut"
+                            android:textSize="20sp" />
 
-                        <ImageView
-                            android:id="@+id/imageView14"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/watermelon"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle16"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Watermelon"
-                        android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.35"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                            <ImageView
+                                android:id="@+id/imageView37"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/melon"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle39"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Melon"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView13"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/ginger"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle13"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Ginger Root"
-                        android:textSize="20sp" />
+                            <ImageView
+                                android:id="@+id/imageView38"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/pumpkin"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle38"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Pumpkin"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView33"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/jicama"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle33"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Jicama"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                            <ImageView
+                                android:id="@+id/imageView39"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/basil"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle37"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Basil"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView34"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/sweet_potato_"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle36"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Sweet Potato"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                            <ImageView
+                                android:id="@+id/imageView40"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:srcCompat="@drawable/lemon"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
+                        <Button
+                            android:id="@+id/buttonToggle40"
+                            style="@style/Widget.Kamatechs_App.Button"
+                            android:layout_width="330dp"
+                            android:layout_height="48dp"
+                            android:text="Lemon"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                        <ImageView
-                            android:id="@+id/imageView35"
+                        <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/coconut"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
 
-                    <Button
-                        android:id="@+id/buttonToggle35"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Coconut"
-                        android:textSize="20sp" />
+                            <ImageView
+                                android:id="@+id/imageView36"
+                                android:layout_width="330dp"
+                                android:layout_height="200dp"
+                                android:background="@color/colorOff"
+                                android:contentDescription="Visual LED"
+                                app:layout_constraintHorizontal_bias="0.35"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/grape"
+                                tools:ignore="VectorDrawableCompat" />
+                        </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView37"
+                        <Button
+                            android:id="@+id/buttonToggle34"
+                            style="@style/Widget.Kamatechs_App.Button"
                             android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/melon"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            android:layout_height="48dp"
+                            android:text="Grape fruit"
+                            android:textSize="20sp"
+                            app:layout_constraintHorizontal_bias="0.35" />
 
-                    <Button
-                        android:id="@+id/buttonToggle39"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Melon"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView38"
-                            android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/pumpkin"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <Button
-                        android:id="@+id/buttonToggle38"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Pumpkin"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView39"
-                            android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/basil"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <Button
-                        android:id="@+id/buttonToggle37"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Basil"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView40"
-                            android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
-                            app:srcCompat="@drawable/lemon"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <Button
-                        android:id="@+id/buttonToggle40"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Lemon"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="330dp"
-                        android:layout_height="200dp"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="8dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginRight="16dp">
-
-                        <ImageView
-                            android:id="@+id/imageView36"
-                            android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            android:background="@color/colorOff"
-                            android:contentDescription="Visual LED"
-                            app:layout_constraintHorizontal_bias="0.35"
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="150dp"
+                            android:text=""
+                            app:layout_constraintEnd_toStartOf="@+id/buttonToggle34"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/grape"
-                            tools:ignore="VectorDrawableCompat" />
-                    </com.google.android.material.card.MaterialCardView>
+                            app:layout_constraintTop_toTopOf="parent">
 
-                    <Button
-                        android:id="@+id/buttonToggle34"
-                        style="@style/Widget.Kamatechs_App.Button"
-                        android:layout_width="330dp"
-                        android:layout_height="48dp"
-                        android:text="Grape fruit"
-                        android:textSize="20sp"
-                        app:layout_constraintHorizontal_bias="0.35" />
+                        </TextView>
+                    </LinearLayout>
+                </ScrollView>
 
-                    <TextView
-                        android:layout_width="300dp"
-                        android:layout_height="150dp"
-                        android:text=""
-                        app:layout_constraintEnd_toStartOf="@+id/buttonToggle34"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+            </FrameLayout>
 
-                    </TextView>
-                </LinearLayout>
-            </ScrollView>
+            <Button
+                android:id="@+id/buttonConnect"
+                style="@style/Widget.Kamatechs_App.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="CONNECT"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
-        </FrameLayout>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/buttonConnect"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentBottom="true"
+                android:keepScreenOn="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:labelVisibilityMode="auto"
+                app:menu="@menu/bottom_nav"
+                style="@style/Widget.Material3.BottomNavigationView"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Connect"
-            android:textColor="@android:color/background_light"
-            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
-            app:layout_constraintEnd_toEndOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="@+id/toolbar" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:keepScreenOn="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:labelVisibilityMode="auto"
-            app:menu="@menu/bottom_nav"
-            style="@style/Widget.Material3.BottomNavigationView"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

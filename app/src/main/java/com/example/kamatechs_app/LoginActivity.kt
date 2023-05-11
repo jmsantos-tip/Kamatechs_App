@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val actionbar = supportActionBar
-        actionbar!!.title = "Sign In"
+        actionbar!!.title = "Sign in"
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding.btnLogin.setOnClickListener {

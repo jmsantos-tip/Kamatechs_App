@@ -4,143 +4,158 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FAQActivity">
 
-    <ScrollView
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/gradient_bg"
-        android:id="@+id/faqConstraint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageFaq"
-            android:layout_width="123dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="115dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/chat"
-            tools:ignore="ImageContrastCheck" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="@drawable/gradient_bg"
+                android:id="@+id/faqConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textF"
-            android:layout_width="342dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="56dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="FREQUENTLY ASKED QUESTIONS"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="28sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageFaq" />
+                <ImageView
+                    android:id="@+id/imageFaq"
+                    android:layout_width="123dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="115dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/chat"
+                    tools:ignore="ImageContrastCheck" />
 
-        <TextView
-            android:id="@+id/textFAQ"
+                <TextView
+                    android:id="@+id/textF"
+                    android:layout_width="342dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="57dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="56dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="FREQUENTLY ASKED QUESTIONS"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageFaq" />
+
+                <TextView
+                    android:id="@+id/textFAQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="189dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="What is Kamatechs?"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textF" />
+
+                <TextView
+                    android:id="@+id/textF1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="23dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Kamatechs is a mobile application designed to configure the adaptive cooling storage and monitor the real-time status of the adaptive cooling storage. "
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textFAQ" />
+
+                <TextView
+                    android:id="@+id/textF2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="63dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="How does the Kamatechs works?"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textF1" />
+
+                <TextView
+                    android:id="@+id/textF3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="23dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="The user must be connected to the 'Kamatechs_AP' and be paired with 'HC-05' successfully. The user will then be able to select the fruit/vegetable they want to store through 'Storage Configuration'. They will also be able to view the real-time status of the adaptive cooling storage through the 'Storage Device Status'."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textF2" />
+
+                <TextView
+                    android:id="@+id/textF4"
+                    android:layout_width="330dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="49dp"
+                    android:fontFamily="@font/raleway_bold"
+                    android:text="What are the benefits of using kamatechs?"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textF3" />
+
+                <TextView
+                    android:id="@+id/textF5"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="23dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="With Kamatechs, the users will be able to know the status of their adaptive cooling storage system."
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textF4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="189dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="What is Kamatechs?"
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textF" />
-
-        <TextView
-            android:id="@+id/textF1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="23dp"
-            android:fontFamily="@font/open_sans"
-            android:text="Kamatechs is a mobile application designed to configure the adaptive cooling storage and monitor the real-time status of the adaptive cooling storage. "
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textFAQ" />
-
-        <TextView
-            android:id="@+id/textF2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="63dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="How does the Kamatechs works?"
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textF1" />
-
-        <TextView
-            android:id="@+id/textF3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="23dp"
-            android:fontFamily="@font/open_sans"
-            android:text="The user must be connected to the 'Kamatechs_AP' and be paired with 'HC-05' successfully. The user will then be able to select the fruit/vegetable they want to store through 'Storage Configuration'. They will also be able to view the real-time status of the adaptive cooling storage through the 'Storage Device Status'."
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textF2" />
-
-        <TextView
-            android:id="@+id/textF4"
-            android:layout_width="330dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="49dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="What are the benefits of using kamatechs?"
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textF3" />
-
-        <TextView
-            android:id="@+id/textF5"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="23dp"
-            android:fontFamily="@font/open_sans"
-            android:text="With Kamatechs, the users will be able to know the status of their adaptive cooling storage system."
-            android:textAlignment="viewStart"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textF4" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

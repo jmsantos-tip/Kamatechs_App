@@ -133,7 +133,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="102dp"
             android:textColor="@color/colorAccent"
-            android:text="Don't have an account? Sign Up"
+            android:text="Don't have an account? Sign up"
             android:textSize="16sp"
             android:fontFamily="@font/open_sans"
             app:layout_constraintEnd_toEndOf="parent"

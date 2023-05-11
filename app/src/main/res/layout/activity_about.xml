@@ -4,68 +4,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AboutActivity">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/gradient_bg"
-        android:id="@+id/aboutConstraint"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id ="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageAbout"
-            android:layout_width="173dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="96dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/information" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/gradient_bg"
+            android:id="@+id/aboutConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
+            <ImageView
+                android:id="@+id/imageAbout"
+                android:layout_width="173dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="96dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="96dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/information" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="146dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="147dp"
+                android:fontFamily="@font/raleway_bold"
+                android:text="ABOUT"
+                android:textColor="@color/colorAccent"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageAbout" />
+
+            <TextView
+                android:id="@+id/textAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Kamatechs is a mobile application that helps users configure and monitor the adaptive cooling storage which maintains the quality and prolong the lifespan of post-harvest tomatoes. Through this application, the users will be able to monitor if the storage system reaches its optimal temperature and humidity. "
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentBottom="true"
+                android:keepScreenOn="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_nav"
+                app:labelVisibilityMode="selected"
+                style="@style/Widget.Material3.BottomNavigationView"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="146dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="147dp"
-            android:fontFamily="@font/raleway_bold"
-            android:text="ABOUT"
-            android:textColor="@color/colorAccent"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageAbout" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navdrawer_menu"
+            />
 
-        <TextView
-            android:id="@+id/textAbout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="30dp"
-            android:fontFamily="@font/open_sans"
-            android:text="Kamatechs is a mobile application that helps users configure and monitor the adaptive cooling storage. Through this application, the users will be able to monitor if the storage system reaches its optimal temperature and humidity. With this, it will be able to maintain the quality and prolong the lifespan of post-harvest tomatoes."
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </androidx.drawerlayout.widget.DrawerLayout>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_alignParentBottom="true"
-            android:keepScreenOn="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:menu="@menu/bottom_nav"
-            app:labelVisibilityMode="selected"
-            style="@style/Widget.Material3.BottomNavigationView"/>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
