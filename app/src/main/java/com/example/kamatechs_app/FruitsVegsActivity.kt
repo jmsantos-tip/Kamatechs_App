@@ -137,10 +137,6 @@ class FruitsVegsActivity : AppCompatActivity() {
         imageView2.setBackgroundColor(resources.getColor(R.color.colorOff))
         val buttonToggle2 = findViewById<Button>(R.id.buttonToggle2)
         buttonToggle2.isEnabled = false
-        val imageView3 = findViewById<ImageView>(R.id.imageView3)
-        imageView3.setBackgroundColor(resources.getColor(R.color.colorOff))
-        val buttonToggle3 = findViewById<Button>(R.id.buttonToggle3)
-        buttonToggle3.isEnabled = false
         val imageView4 = findViewById<ImageView>(R.id.imageView4)
         imageView4.setBackgroundColor(resources.getColor(R.color.colorOff))
         val buttonToggle4 = findViewById<Button>(R.id.buttonToggle4)
@@ -202,11 +198,6 @@ class FruitsVegsActivity : AppCompatActivity() {
 
         imageView2.setOnClickListener {
             startActivity(Intent(this, GreenTomatoActivity::class.java))
-            true
-        }
-
-        imageView3.setOnClickListener {
-            startActivity(Intent(this, MangoActivity::class.java))
             true
         }
 
@@ -308,7 +299,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                             buttonConnect.isEnabled = true
                             buttonToggle.isEnabled = true
                             buttonToggle2.isEnabled = true
-                            buttonToggle3.isEnabled = true
                             buttonToggle4.isEnabled = true
                             buttonToggle5.isEnabled = true
                             buttonToggle6.isEnabled = true
@@ -343,12 +333,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                             }
                             "mature green 0" -> {
                                 imageView2.setBackgroundColor(resources.getColor(R.color.colorOff))
-                            }
-                            "mango 1" -> {
-                                imageView3.setBackgroundColor(resources.getColor(R.color.colorOn))
-                            }
-                            "mango 0" -> {
-                                imageView3.setBackgroundColor(resources.getColor(R.color.colorOff))
                             }
                             "cucumber 1" -> {
                                 imageView4.setBackgroundColor(resources.getColor(R.color.colorOn))
@@ -449,7 +433,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     buttonToggle.text = "Selected"
                     cmdText = "<ripe tomato 1>"
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -468,7 +451,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     buttonToggle.text = "Ripe Tomato"
                     cmdText = "<ripe tomato 0>"
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -495,7 +477,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     buttonToggle2.text = "Selected"
                     cmdText = "<mature green 1>"
                     buttonToggle.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -514,52 +495,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     buttonToggle2.text = "Mature Green Tomato"
                     cmdText = "<mature green 0>"
                     buttonToggle.isEnabled = true
-                    buttonToggle3.isEnabled = true
-                    buttonToggle4.isEnabled = true
-                    buttonToggle5.isEnabled = true
-                    buttonToggle6.isEnabled = true
-                    buttonToggle7.isEnabled = true
-                    buttonToggle8.isEnabled = true
-                    buttonToggle9.isEnabled = true
-                    buttonToggle10.isEnabled = true
-                    buttonToggle11.isEnabled = true
-                    buttonToggle12.isEnabled = true
-                    buttonToggle13.isEnabled = true
-                    buttonToggle14.isEnabled = true
-                    buttonToggle15.isEnabled = true
-                    buttonToggle16.isEnabled = true
-                }
-            }
-            connectedThread!!.write(cmdText)
-        }
-        buttonToggle3.setOnClickListener {
-            var cmdText: String? = null
-            val btnState3 = buttonToggle3.text.toString().lowercase(Locale.getDefault())
-            when(btnState3){
-                "mango" -> {
-                    buttonToggle3.text = "Selected"
-                    cmdText = "<mango 1>"
-                    buttonToggle.isEnabled = false
-                    buttonToggle2.isEnabled = false
-                    buttonToggle4.isEnabled = false
-                    buttonToggle5.isEnabled = false
-                    buttonToggle6.isEnabled = false
-                    buttonToggle7.isEnabled = false
-                    buttonToggle8.isEnabled = false
-                    buttonToggle9.isEnabled = false
-                    buttonToggle10.isEnabled = false
-                    buttonToggle11.isEnabled = false
-                    buttonToggle12.isEnabled = false
-                    buttonToggle13.isEnabled = false
-                    buttonToggle14.isEnabled = false
-                    buttonToggle15.isEnabled = false
-                    buttonToggle16.isEnabled = false
-                }
-                "selected" -> {
-                    buttonToggle3.text = "Mango"
-                    cmdText = "<mango 0>"
-                    buttonToggle.isEnabled = true
-                    buttonToggle2.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -586,7 +521,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<cucumber 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
                     buttonToggle7.isEnabled = false
@@ -605,7 +539,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<cucumber 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
                     buttonToggle7.isEnabled = true
@@ -631,7 +564,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<green banana 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle6.isEnabled = false
                     buttonToggle7.isEnabled = false
@@ -650,7 +582,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<green banana 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle6.isEnabled = true
                     buttonToggle7.isEnabled = true
@@ -676,7 +607,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<ripe banana 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle7.isEnabled = false
@@ -695,7 +625,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<ripe banana 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle7.isEnabled = true
@@ -721,7 +650,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<watermelon 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -740,7 +668,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<watermelon 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -766,7 +693,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<ginger root 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -785,7 +711,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<ginger root 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -811,7 +736,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<jicama 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -830,7 +754,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<jicama 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -856,7 +779,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<sweet potato 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -875,7 +797,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<sweet potato 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -901,7 +822,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<coconut 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -920,7 +840,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<coconut 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -946,7 +865,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<melon 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -965,7 +883,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<melon 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -991,7 +908,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<pumpkin 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -1010,7 +926,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<pumpkin 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -1036,7 +951,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<basil 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -1055,7 +969,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<basil 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -1081,7 +994,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<lemon 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -1100,7 +1012,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<lemon 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true
@@ -1126,7 +1037,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<grape fruit 1>"
                     buttonToggle.isEnabled = false
                     buttonToggle2.isEnabled = false
-                    buttonToggle3.isEnabled = false
                     buttonToggle4.isEnabled = false
                     buttonToggle5.isEnabled = false
                     buttonToggle6.isEnabled = false
@@ -1145,7 +1055,6 @@ class FruitsVegsActivity : AppCompatActivity() {
                     cmdText = "<grape fruit 0>"
                     buttonToggle.isEnabled = true
                     buttonToggle2.isEnabled = true
-                    buttonToggle3.isEnabled = true
                     buttonToggle4.isEnabled = true
                     buttonToggle5.isEnabled = true
                     buttonToggle6.isEnabled = true

@@ -56,9 +56,6 @@
             android:name=".MelonActivity"
             android:exported="false" />
         <activity
-            android:name=".MangoActivity"
-            android:exported="false" />
-        <activity
             android:name=".LemonActivity"
             android:exported="false" />
         <activity

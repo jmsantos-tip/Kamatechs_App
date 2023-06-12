@@ -120,35 +120,6 @@
                             android:textSize="20sp"
                             app:layout_constraintHorizontal_bias="0.35" />
 
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="330dp"
-                            android:layout_height="200dp"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginRight="16dp">
-
-                            <ImageView
-                                android:id="@+id/imageView3"
-                                android:layout_width="330dp"
-                                android:layout_height="200dp"
-                                android:background="@color/colorOff"
-                                app:layout_constraintHorizontal_bias="0.35"
-                                app:srcCompat="@drawable/mango"
-                                tools:ignore="VectorDrawableCompat" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <Button
-                            android:id="@+id/buttonToggle3"
-                            style="@style/Widget.Kamatechs_App.Button"
-                            android:layout_width="330dp"
-                            android:layout_height="48dp"
-                            android:text="Mango"
-                            android:textSize="20sp"
-                            app:layout_constraintHorizontal_bias="0.35" />
-
                         <com.google.android.material.card.MaterialCardView
                             android:layout_width="330dp"
                             android:layout_height="200dp"
