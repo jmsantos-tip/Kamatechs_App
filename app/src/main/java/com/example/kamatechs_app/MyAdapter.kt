@@ -41,7 +41,7 @@ class MyAdapter(private val storageList : ArrayList<Storage>) : RecyclerView.Ada
 
     override fun getItemCount(): Int {
 
-        return storageList.size
+        return 1
     }
 
 
